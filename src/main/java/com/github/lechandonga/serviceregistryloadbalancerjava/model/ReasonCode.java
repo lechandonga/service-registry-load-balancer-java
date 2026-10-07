@@ -1,0 +1,13 @@
+package com.github.lechandonga.serviceregistryloadbalancerjava.model;
+
+public enum ReasonCode {
+    INVALID_REQUEST,
+    INSTANCE_NOT_FOUND,
+    INSTANCE_ALREADY_REGISTERED,
+    INSTANCE_EXPIRED,
+    INSTANCE_DEREGISTERED,
+    NO_AVAILABLE_INSTANCE,
+    RETRY_LIMIT_EXCEEDED,
+    UNSUPPORTED_STRATEGY,
+    REQUEST_KEY_REQUIRED
+}
