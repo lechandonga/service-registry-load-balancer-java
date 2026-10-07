@@ -1,0 +1,15 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{40} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 单测日志：重点打印注册中心/选路/探测业务事件，框架噪音降到 WARN -->
+    <logger name="com.github.lechandonga.serviceregistryloadbalancerjava" level="DEBUG"/>
+    <!-- 用例覆盖横幅：业务名 + 用例名 + PASSED/FAILED -->
+    <logger name="TEST-COVERAGE" level="INFO"/>
+    <root level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
